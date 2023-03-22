@@ -1,0 +1,203 @@
+*, 
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.quizapp__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gamecard__container {
+  width: 90%;
+  max-width: 40rem;
+  min-height: 25rem;
+  padding: 1rem;
+  background: rgb(173, 198, 207);
+  border-radius: 16px;
+}
+
+.title {
+  text-transform: uppercase;
+  margin: 0.25rem;
+}
+
+
+.gamecard__question-index {
+  padding: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.gamecard__question {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.gamecard__answers-container {
+  width: 100%;
+  height: 18rem;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.possible_ans {
+  width: 95%;
+  margin: 0.5rem 0.25rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  background: rgb(233, 237, 238);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.possible_ans:hover {
+  color: white;
+  background: rgb(1, 26, 32);
+}
+
+.selected {
+  color: white;
+  background: rgb(1, 17, 34);
+}
+
+.next_btn {
+  width: 5rem;
+  height: 2rem;
+  margin: 0.5rem;
+  color: rgb(233, 237, 238);
+  background: rgb(3, 40, 49);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.next_btn:hover {
+  background: rgb(73, 141, 158);
+}
+
+.underline {
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+
+.result-modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(241, 241, 238, 0.8);
+  z-index: 10;
+  backdrop-filter: blur(3px);
+}
+
+.result-modal__wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 4px solid black;
+}
+
+.result-modal__heading {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.result-modal__score {
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.result-card {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+.result-modal__btn-container {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.result-modal__btn {
+  width: 6rem;
+  height: 2rem;
+  cursor: pointer;
+  border: none;
+  color: rgba(255, 255, 255, 0.801);
+  background: rgb(9, 19, 27);
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.result-modal__btn:hover {
+  color: rgb(9, 19, 27);
+  background: rgba(255, 255, 255, 0.801);
+  border: 1px solid rgb(9, 19, 27);
+}
+
+.lds-facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 30vh;
+}
+.lds-facebook div {
+  width: 24px;
+  margin: 0.5rem;
+  background: rgb(4, 19, 27);
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  animation-delay: -0.36s;
+}
+.lds-facebook div:nth-child(2) {
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(3) {
+  animation-delay: -0.12;
+}
+.lds-facebook div:nth-child(4) {
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    height: 72px;
+  }
+  50%, 100% {
+    height: 36px;
+  }
+}
